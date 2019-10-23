@@ -12,13 +12,18 @@ class _Idea1State extends State<Idea1Page> {
   Widget build(BuildContext context) {
     return new MaterialApp(
       home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('想法1'),
-        ),
-        body: new Center(
-          child: null,
-        ),
-      ),
+          appBar: new AppBar(
+            title: new Text('想法1'),
+          ),
+          body: new Container(
+            child: new AspectRatio(
+              aspectRatio: 3 / 1,
+              child: new Container(
+                color: Colors.black12,
+                margin: const EdgeInsets.all(15.0),
+              ),
+            ),
+          )),
     );
   }
 }

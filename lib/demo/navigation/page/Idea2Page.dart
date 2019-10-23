@@ -13,10 +13,16 @@ class _Idea2State extends State<Idea2Page> {
     return new MaterialApp(
       home: new Scaffold(
         appBar: new AppBar(
-          title: new Text('想法2'),
+          title: Text('想法2'),
         ),
-        body: new Center(
-          child: null,
+        body: new ConstrainedBox(
+          constraints: const BoxConstraints.expand(),
+          child: const Card(
+            child: Align(
+              alignment: Alignment.center,
+              child: Text('Hello world'),
+            ),
+          ),
         ),
       ),
     );

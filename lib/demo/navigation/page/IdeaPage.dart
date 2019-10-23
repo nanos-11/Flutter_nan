@@ -11,12 +11,20 @@ class _IdeaState extends State<IdeaPage> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('想法'),
-        ),
-        body: new Center(
-          child: null,
+      home: new Center(
+        child: new Container(
+          height: 120.0,
+          width: 120.0,
+          color: Colors.blue[50],
+          child: Align(
+            alignment: Alignment.center,
+//            alignment: Alignment(0.2, 0.6),
+//            alignment: Alignment.topRight,
+//            alignment: FractionalOffset(0.2, 0.6),
+            child: FlutterLogo(
+              size: 60,
+            ),
+          ),
         ),
       ),
     );
