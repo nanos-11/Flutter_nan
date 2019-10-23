@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorial/index/Index.dart';
+import 'package:flutter_nan/index/Index.dart';
 
 void main() => runApp(MyApp());
 
