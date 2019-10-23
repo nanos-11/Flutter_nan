@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 ///
 /// @date 2019/10/17
 /// @since 1.0.0
-/// @version code 1
 /// @author nan
 class Follow extends StatefulWidget {
   @override
