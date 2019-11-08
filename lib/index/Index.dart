@@ -10,6 +10,7 @@ import 'package:flutter_nan/demo/navigation/page/Idea4Page.dart';
 import 'package:flutter_nan/demo/tab/page/Follow.dart';
 import 'package:flutter_nan/demo/tab/page/Hot.dart';
 import 'package:flutter_nan/demo/tab/page/Recommend.dart';
+import 'package:flutter_nan/theme/ThemeSetPage.dart';
 
 class Index extends StatefulWidget {
   @override
@@ -199,6 +200,37 @@ class _IndexState extends State<Index> {
     ]);
   }
 
+  /// 使用主题共享颜色和字体样式
+  /// @date 2019/11/8
+  /// @since 1.0.0
+  /// @version code 1
+  /// @author nan
+  Widget intentThemePage() {
+    return Row(
+      children: <Widget>[
+        Expanded(
+          child: Container(
+            child: FlatButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return ThemeSetPage();
+                  }));
+                },
+                child: Text(
+                  '主题共享颜色和字体样式',
+                  style: TextStyle(color: Colors.white),
+                )),
+            decoration: BoxDecoration(
+                borderRadius:
+                    const BorderRadius.all(const Radius.circular(4.0)),
+                color: Colors.blue),
+          ),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -212,6 +244,7 @@ class _IndexState extends State<Index> {
               intentGridView(),
               intentNavigation(),
               intentTabPage(),
+              intentThemePage(),
             ],
           ),
         ),
