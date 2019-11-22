@@ -11,6 +11,7 @@ import 'package:flutter_nan/demo/tab/page/Follow.dart';
 import 'package:flutter_nan/demo/tab/page/Hot.dart';
 import 'package:flutter_nan/demo/tab/page/Recommend.dart';
 import 'package:flutter_nan/theme/ThemeSetPage.dart';
+import 'package:flutter_nan/http/HttpPage.dart';
 
 class Index extends StatefulWidget {
   @override
@@ -225,6 +226,25 @@ class _IndexState extends State<Index> {
                 borderRadius:
                     const BorderRadius.all(const Radius.circular(4.0)),
                 color: Colors.blue),
+          ),
+        ),
+        Expanded(
+          child: Container(
+            child: FlatButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                        return HttpPage();
+                  }));
+                },
+                child: Text(
+                  '从网上获取数据',
+                  style: TextStyle(color: Colors.white),
+                )),
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.all(const Radius.circular(4.0)),
+              color: Colors.black,
+            ),
           ),
         ),
       ],
